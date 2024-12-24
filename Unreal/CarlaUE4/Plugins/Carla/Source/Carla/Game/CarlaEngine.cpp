@@ -81,7 +81,7 @@ FCarlaEngine::~FCarlaEngine()
     if (ROS2->IsEnabled())
       ROS2->Shutdown();
     #endif
-    FWorldDelegates::OnWorldTickStart.Remove(OnPreTickHandle);
+    FWorldDelegates::OnWorldTickStart.Remove(OnPreTickHandle);移除命名空间的一部分
     FWorldDelegates::OnWorldPostActorTick.Remove(OnPostTickHandle);
     FCarlaStaticDelegates::OnEpisodeSettingsChange.Remove(OnEpisodeSettingsChangeHandle);
   }
